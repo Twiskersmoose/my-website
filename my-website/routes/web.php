@@ -4,5 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 Route::get('/',[HomeController::class, "index"])->name("home");
-Route::get('/pics',[HomeController::class, "load_pics"])->name("pics");
+Route::get('/rooms',[HomeController::class, "load_rooms"])->name("rooms");
+
 

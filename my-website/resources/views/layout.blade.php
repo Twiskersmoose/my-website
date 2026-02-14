@@ -46,20 +46,8 @@
     </div>
 </nav>
 
-    <!-- <div> -->
-        <!-- <div>
-            <div>
-                <a href="{{ route('home') }}">Home</a>
-            </div> 
-            <div>
-                <a href="{{ route('pics') }}">Pics</a>
-            </div>    
-        </div> -->
-        <div class="contentcontainer">@yield("content")</div>
-    <!-- </div> -->
-
-    <!-- <div></div> -->
-        <footer class="glass-footer py-5">
+<div class="contentcontainer">@yield("content")</div>
+<footer class="glass-footer py-5">
   <div class="container-fluid px-4">
     <div class="row align-items-center justify-content-center">
 

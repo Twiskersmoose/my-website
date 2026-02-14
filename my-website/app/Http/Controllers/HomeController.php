@@ -18,11 +18,10 @@ class HomeController extends Controller
         return view('home.home',["test_var" => $testArr]);
     }
 
-    public function load_pics(){
+    public function load_rooms(){
 
-        return view('home.pics');
+        return view('rooms.rooms');
     }
-
 
     public function Calc($number1,$number2){
         return $number1 + $number2;
