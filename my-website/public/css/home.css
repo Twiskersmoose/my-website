@@ -1,0 +1,82 @@
+body {
+    background-image: url('/images/mainbg3.jpg');
+    background-size: cover;        /* makes it fill the screen */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;  /* prevents tiling */
+    background-attachment: fixed;  /* optional: parallax effect */
+}
+.glass-pane {
+    position: relative;
+    background: rgba(255, 255, 255, 0.10); /* subtle glass */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.15);
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-pane:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+.glass-pane>h3{
+    color: #cbd0e4;
+    text-shadow: -1px 1px 3px #0d183d;
+}
+.glass-pane>p{
+    color: #cbd0e4;
+    text-shadow: -1px 1px 3px #0d183d;
+}
+
+.square-pane {
+    aspect-ratio: 1 / 1; /* ensures squares */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px; /* optional: limit size */
+}
+
+.square-pane img {
+    max-height: 256px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Optional: subtle inner frost edges */
+.square-pane::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(255,255,255,0.28) 0%,
+            rgba(255,255,255,0.12) 12%,
+            rgba(255,255,255,0.04) 20%,
+            transparent 32%,
+            transparent 68%,
+            rgba(255,255,255,0.04) 80%,
+            rgba(255,255,255,0.12) 88%,
+            rgba(255,255,255,0.28) 100%
+        ),
+        linear-gradient(to right,
+            rgba(255,255,255,0.28) 0%,
+            rgba(255,255,255,0.10) 6%,
+            rgba(255,255,255,0.03) 10%,
+            transparent 18%,
+            transparent 82%,
+            rgba(255,255,255,0.03) 90%,
+            rgba(255,255,255,0.10) 94%,
+            rgba(255,255,255,0.28) 100%
+        );
+}
+.main-panes {
+    margin-top: 200px !important; /* adjust as needed */
+}
+
+
