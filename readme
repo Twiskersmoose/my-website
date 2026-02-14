@@ -1,0 +1,12 @@
+Commands to start the laravel server
+
+1) In VS Code. Go to Terminal -> New Terminal
+2) Type 'cd my-website'
+3) Type php artisan serve
+4) Go to http://127.0.0.1:8000/ in browser
+
+To stop server from running, press ctrl+c
+
+How to make a new controller
+(A controller is where you put all the PHP code for loading a webpage)
+1) Command "php artisan make:controller {controller name here}"
