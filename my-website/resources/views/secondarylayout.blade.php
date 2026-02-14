@@ -17,34 +17,45 @@
      
 </head>
 <body>
-    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/secondarylayout.css">
     
     <style>
 
     </style>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
-    <div class="container navcontainer">
-        
-        <a class="navbar-brand" href="#">BERGHUUS</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav w-100">
+  <div class="container d-flex justify-content-between align-items-center">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Left links -->
+    <ul class="navbar-nav d-flex flex-row">
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="{{route('home')}}">Home</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="{{route('rooms')}}">Rooms</a>
+      </li>
+    </ul>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item my-3">
-                    <!-- <img src="{{ asset('images/mtn.png') }}" alt="divider" id="nav-line" class="navbar-divider"> -->
-                    <img src="{{ asset('images/whiteline.png') }}" alt="divider" id="nav-line" class="navbar-divider">
-                    <!-- <a class="nav-link" href="{{ route('home') }}">Home</a> -->
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li> -->
-            </ul>
-        </div>
-    </div>
+    <!-- Brand in center -->
+    <a class="navbar-brand mx-3 text-center" href="#">BERGHUUS</a>
+
+    <!-- Right links -->
+    <ul class="navbar-nav d-flex flex-row">
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="#about">About</a>
+      </li>
+      <li class="nav-item mx-2">
+        <a class="nav-link text-white" href="#contact">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Toggler (optional for small screens) -->
+    <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+  </div>
 </nav>
+
 
 <div class="contentcontainer">@yield("content")</div>
 <footer class="glass-footer py-5">

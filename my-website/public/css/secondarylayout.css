@@ -10,9 +10,9 @@
 .navbar-brand {
     text-shadow: -5px 2px 6px #000624a8;
     font-family: Tangerine;
-    font-size: 57px;
+    font-size: 26px;
     font-weight: 100;
-    letter-spacing: 4.2rem;
+    letter-spacing: 3.2rem;
     color: #d6e3f3;
 }
 .navcontainer{
@@ -27,6 +27,7 @@
 }
 #nav-line {
     width:500px;
+    margin-right: 70px;
 }
 /* Frosty edge effect */
 .glass-nav::before {
@@ -69,21 +70,28 @@
     );
 }
 .hero-text {
-    margin-top: 175px; /* space below navbar */
+    margin-top: 75px; /* space below navbar */
     margin-bottom: 60px;
     color: #e5e7f3;
     text-shadow: -1px 1px 3px #0d183d;
     text-align: center;
     font-family: 'Tangerine';
+    letter-spacing: 0.2rem;
 }
 /* .hero-text p {
     font-family: 'Parisienne', cursive;
 } */
+ .nav-link {
+    color: #e5e7f3;
+    text-shadow: -1px 1px 3px #0d183d;
+ }
 
-.hero-text h1 {
-    font-size: 4rem;       /* large, elegant title */
-    font-weight: 400;      /* lighter weight looks more flowing */
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: -0px 0px 3px rgb(2 1 44);
+    font-family: 'Tangerine';
+    letter-spacing: 0.2rem;
 }
 
 .hero-text p {
@@ -145,4 +153,23 @@ body {
   .glass-footer p {
     font-size: 0.95rem;
   }
+}
+
+
+.carousel-container {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius:16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.carousel-inner img {
+    object-fit: cover;
+    max-height: 450px;
+    width: 100%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.7));
 }

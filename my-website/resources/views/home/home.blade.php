@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('primarylayout')
 
 @section("title", "Home")
 
@@ -15,6 +15,7 @@
 <div class="d-flex justify-content-center align-items-center flex-wrap gap-5 my-5 main-panes">
 
     <!-- Pane 1 -->
+     <a  href="{{route('rooms')}}" class="text-decoration-none">
     <div class="glass-pane square-pane text-center">
         <img src="http://127.0.0.1:8000/images/smallimg1.jpg" class="img-fluid rounded mb-3" alt="Example Image">
 
@@ -27,6 +28,7 @@
             Enjoy our spacious deluxe rooms with king-size beds, en-suite bathrooms, and stunning views of the frozen landscape.
         </p>
     </div>
+    </a>
 
     <!-- Pane 2 -->
     <div class="glass-pane square-pane text-center">
