@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/css/rooms.css">
 <div>
     <div class="hero-text text-center">
-    <h2>Discover our beautifully designed rooms, where alpine charm meets modern comfort.<br>Each space is crafted to offer warmth and tranquility for a truly unforgettable stay.</h2>
+    <h2 style="font-family:math !important;">Discover our beautifully designed rooms, where alpine charm meets modern comfort.<br>Each space is crafted to offer warmth and tranquility for a truly unforgettable stay.</h2>
     <!-- <p></p> -->
 </div>
     <style>

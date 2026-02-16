@@ -36,7 +36,7 @@
     </ul>
 
     <!-- Brand in center -->
-    <a class="navbar-brand mx-3 text-center" href="#">BERGHUUS</a>
+    <a class="navbar-brand mx-3 text-center" href="{{route('home')}}">BERGHUUS</a>
 
     <!-- Right links -->
     <ul class="navbar-nav d-flex flex-row">
