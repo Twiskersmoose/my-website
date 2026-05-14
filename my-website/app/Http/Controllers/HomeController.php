@@ -22,6 +22,10 @@ class HomeController extends Controller
 
         return view('rooms.rooms');
     }
+    public function load_book(){
+
+        return view('rooms.book');
+    }
 
     public function Calc($number1,$number2){
         return $number1 + $number2;

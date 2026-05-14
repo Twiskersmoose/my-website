@@ -8,14 +8,28 @@
 
 @endphp
 <link rel="stylesheet" href="/css/rooms.css">
-<div>
-    <div class="hero-text text-center">
-    <h2 style="font-family:math !important;">Discover our beautifully designed rooms, where alpine charm meets modern comfort.<br>Each space is crafted to offer warmth and tranquility for a truly unforgettable stay.</h2>
-    <!-- <p></p> -->
-</div>
-    <style>
-
-    </style>
+  <div>
+      <div class="hero-text text-center">
+      <h2 style="font-family:math !important;">Discover our beautifully designed rooms, where alpine charm meets modern comfort.<br>Each space is crafted to offer warmth and tranquility for a truly unforgettable stay.</h2>
+      <!-- <p></p> -->
+  </div>
+  <div class="modal" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="room-carousel-panel mx-auto my-5 glass-pane p-4 rounded align-items-stretch" style="max-width: 1200px; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;min-height:500px;">
 
   <!-- Carousel -->
@@ -23,14 +37,14 @@
     <div class="carousel-inner rounded">
       <div class="carousel-item active"
             data-room-title="Deluxe Room"
-            data-room-description="Spacious room with mountain views and queen-size bed. Includes ensuite and kitchenette."
+            data-room-description="Spacious room with mountain views, spa-access, and a kitchenette."
             data-room-price="$250/night"
             data-room-link="/book/deluxe-room"
-            data-room-guests="6 Guests"
+            data-room-guests="5 Guests"
             data-room-bed="2 Queen Beds & 1 King Single"
             data-room-view="Mountain View"
             data-room-wifi="Free Wi-Fi"
-            data-room-bathroom="En-suite bathroom">
+            data-room-bathroom="Full bathroom">
             <img src="{{ asset('images/rooms/room1.jpg') }}" class="d-block w-100 rounded" alt="Deluxe Room">
         </div>
       <div class="carousel-item" 
@@ -147,7 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // On slide change
   carousel.addEventListener('slid.bs.carousel', updateRoomInfo);
 });
-
+//Booking modal section
+const bookingModal = document.getElementById('bookingModal');
+bookingModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+//
 </script>
 
 

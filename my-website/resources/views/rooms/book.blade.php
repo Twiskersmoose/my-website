@@ -1,6 +1,6 @@
 @extends('secondarylayout')
 
-@section("title", "Template")
+@section("title", "Book")
 
 @section("content")
 
