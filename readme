@@ -9,7 +9,3 @@ Commands to install & start the laravel server:
 7) Go to http://127.0.0.1:8000/ in browser
 
 To stop server from running, press ctrl+c
-
-How to make a new controller
-(A controller is where you put all the PHP code for loading a webpage)
-1) Command "php artisan make:controller {controller name here}"
