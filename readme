@@ -1,4 +1,4 @@
-Commands to install & start the laravel server:
+Commands to install & start the Laravel 11 server:
 
 1) In VS Code. Go to Terminal -> New Terminal
 2) Type 'cd my-website'
