@@ -27,11 +27,11 @@
 <div class="container my-5">
     <div class="row align-items-stretch"> <div class="col-lg-6 mb-4">
             <div class="glass-pane p-4 rounded text-white h-100 d-flex flex-column">
-                <img src="{{ $room['image'] }}" class="img-fluid rounded mb-3 shadow" alt="{{ $room['title'] }}">
+                <img src="/images/rooms/{{ $room['image'] }}.jpg" class="img-fluid rounded mb-3 shadow" alt="{{ $room['title'] }}">
                 <h2 class="text-upgrades" style="font-size: 2rem;">{{ $room['title'] }}</h2>
                 <small class="text-upgrades">{{$room['long_description']}}</small>
                 <div class="mt-auto"> <hr>
-                    <h4 class="mb-0 text-upgrades" style="font-size: 2rem;">{{ $room['display_price'] }}</h4>
+                    <h4 class="mb-0 text-upgrades" style="font-size: 2rem;">${{ $room['price_pn'] }}<small>/night</small></h4>
                 </div>
             </div>
         </div>
@@ -68,6 +68,26 @@
                 <div id="selection-summary" class="mt-auto p-3 rounded border bg-white shadow-sm d-none">
                     <div class="row text-center mb-3">
                         <div class="col-6 border-end">
+                            <small class="text-muted d-block">First Name</small>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted d-block">Last Name</small>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row text-center mb-3">
+                        <div class="col-6 border-end">
+                            <small class="text-muted d-block">Mobile</small>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <small class="text-muted d-block">Email</small>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row text-center mb-3">
+                        <div class="col-6 border-end">
                             <small class="text-muted d-block">CHECK-IN</small>
                             <span id="start_display" class="fw-bold">-</span>
                         </div>
@@ -84,7 +104,7 @@
 
                     <form action="{{ url('/confirm-booking') }}" method="POST">
                         @csrf
-                        <input type="hidden" id="nightly_price" value="{{ $room['price'] }}">
+                        <input type="hidden" id="nightly_price" value="{{ $room['price_pn'] }}">
                         <input type="hidden" name="room_id" value="{{ $room['id'] }}">
                         <input type="hidden" name="start_date" id="start_date_input">
                         <input type="hidden" name="end_date" id="end_date_input">

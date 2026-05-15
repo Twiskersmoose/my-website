@@ -21,15 +21,15 @@
                   data-room-title="{{$room['title']}}"
                   data-room-description="{{$room['description']}}"
                   data-room-price="{{$room['display_price']}}"
-                  data-room-guests="{{$room['guests']}}"
-                  data-room-bed="{{$room['bed']}}"
+                  data-room-guests="Up to {{$room['guests']}} Guests"
+                  data-room-bed="{{$room['beds']}}"
                   data-room-view="{{$room['view']}}"
                   data-room-wifi="{{$room['wifi']}}"
                   data-room-bathroom="{{$room['bathroom']}}"
                   data-room-kitchenette="{{$room['kitchenette']}}"
                   data-room-link="{{$room['link']}}"
                   data-room-id="{{$room['id']}}">
-                  <img src="{{$room['image']}}" class="d-block w-100 rounded" alt="Deluxe Room">
+                  <img src="/images/rooms/{{$room['image']}}.jpg" class="d-block w-100 rounded" alt="Deluxe Room">
               </div>
           @endforeach
         </div>
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
   roomId = activeItem.getAttribute('data-room-id');
   const link = activeItem.getAttribute('data-room-link');
   bookButton.onclick = () => {
-    if (link) window.location.href = link+`?room_id=${roomId}`;
+  window.location.href = '/book'+`?room_id=${roomId}`;
   };
 
   // Amenities

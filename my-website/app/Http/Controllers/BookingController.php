@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Models\Room;
 
 class BookingController extends Controller {
     public function load_book(Request $request){
         $id = $request->query('room_id');
         // dd($id);
-        $rooms = config("hotel.rooms");
-        // dd($rooms);
-        $fa_icons = config("hotel.fa_icons");
-        $room = collect($rooms)->firstWhere('id', $id);
+        $room = Room::findOrFail($id);
+        // dd($room);
+        // $room = collect($rooms)->firstWhere('id', $id);
         $date = Carbon::create(2026, 5, 1);
         $daysInMonth = $date->daysInMonth;
 
