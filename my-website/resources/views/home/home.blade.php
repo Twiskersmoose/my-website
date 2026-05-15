@@ -5,7 +5,7 @@
 @section("content")
 
 @php
-print_r($test_var);
+
 @endphp
  <link rel="stylesheet" href="/css/home.css">
  <div class="hero-text text-center">
