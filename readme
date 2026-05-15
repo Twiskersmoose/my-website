@@ -1,18 +1,12 @@
-Commands to install:
-
-cd {folder name}
-composer install
-cp .env.example .env
-php artisan serve
-
-
-
-Commands to start the laravel server:
+Commands to install & start the laravel server:
 
 1) In VS Code. Go to Terminal -> New Terminal
 2) Type 'cd my-website'
-3) Type php artisan serve
-4) Go to http://127.0.0.1:8000/ in browser
+3) Type composer install
+4) Type cp .env.example .env
+5) Type php artisan key:generate
+6) Type php artisan serve
+7) Go to http://127.0.0.1:8000/ in browser
 
 To stop server from running, press ctrl+c
 
