@@ -8,4 +8,6 @@ Commands to install & start the Laravel 11 server:
 6) Type php artisan serve
 7) Go to http://127.0.0.1:8000/ in browser
 
+Right now only the home, /rooms, and /book pages have any functionality. More to be added in future :)
+
 To stop server from running, press ctrl+c
