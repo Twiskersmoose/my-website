@@ -5,7 +5,6 @@
 @section("content")
 
 @php
-
 @endphp
  <link rel="stylesheet" href="/css/home.css">
  <div class="hero-text text-center">
@@ -17,7 +16,7 @@
     <!-- Pane 1 -->
      <a  href="{{route('rooms')}}" class="text-decoration-none">
     <div class="glass-pane square-pane text-center">
-        <img src="http://127.0.0.1:8000/images/smallimg1.jpg" class="img-fluid rounded mb-3" alt="Example Image">
+        <img src="/images/smallimg1.jpg" class="img-fluid rounded mb-3" alt="Example Image">
 
         <h3 class="mb-2">
             <!-- <i class="fa-solid fa-chart-line me-2"></i> -->
@@ -32,7 +31,7 @@
 
     <!-- Pane 2 -->
     <div class="glass-pane square-pane text-center">
-        <img src="http://127.0.0.1:8000/images/smallimg3.jpg" class="img-fluid rounded mb-3" alt="Example Image">
+        <img src="/images/smallimg3.jpg" class="img-fluid rounded mb-3" alt="Example Image">
 
         <h3 class="mb-2">
             <!-- <i class="fa-solid fa-user me-2"></i> -->
@@ -46,7 +45,7 @@
 
     <!-- Pane 3 -->
     <div class="glass-pane square-pane text-center">
-        <img src="http://127.0.0.1:8000/images/smallimg2.jpg" class="img-fluid rounded mb-3" alt="Example Image">
+        <img src="/images/smallimg2.jpg" class="img-fluid rounded mb-3" alt="Example Image">
 
         <h3 class="mb-2">
             <!-- <i class="fa-solid fa-gear me-2"></i> -->
