@@ -14,6 +14,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   color: white;
+  height: 80vh;
 }
 .room-info {
   display: flex;
@@ -51,7 +52,22 @@ body {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.glass-pane {
+      border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.14),
+        rgba(255,255,255,0.08)
+    );
+}
 
+.text-upgrades {
+  color: #eaeefd;
+  text-shadow: -1px 1px 3px #0d183d;
+  font-weight:400;
+}
 .glass-btn {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -114,4 +130,43 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: drop-shadow(0 0 2px rgba(255,255,255,0.7));
+}
+.calendar-grid {
+  display: grid; 
+  grid-template-columns: repeat(7, 0fr); 
+  gap: 10px;
+}
+.booking-date-btn {
+  width: 40px;
+}
+.booking-date-btn:hover{
+  
+      color: #ffffff;
+    background-color: #d1a45aed;
+    border-color: #f7e7bd;
+}
+.booking-btn-pressed {
+      color: #ffffff;
+    background-color: #d1a45aed;
+    border-color: #f7e7bd;
+}
+.booking-btn-pressed-start-end{
+  color: #ffffff;
+    background-color: #cd8207ed;
+    border-color: #f7e7bd;
+}
+.booking-btn-free {
+  color: white;
+    background-color: #7792bb;
+      border-color: #ffffff;
+}
+.booking-btn-booked {
+    color: #ffffff !important;
+    background-color: #575555ed !important;
+    border-color: #ffffff !important;
+}
+
+.booking-container {
+  width:fit-content;
+  border-radius: 4px;
 }

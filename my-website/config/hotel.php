@@ -1,25 +1,6 @@
-<?php
-
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
-class HomeController extends Controller
-{
-    // this is all PHP
-
-    public function index(){
-        $test = 1 + 1;
-        $testArr = [
-            "var_A" => 1234567,
-            "var_B" => $this->Calc(1,4)
-        ];
-
-        return view('home.home',["test_var" => $testArr]);
-    }
-
-    public function load_rooms(){
-        $rooms_array = [
+<?php 
+return [
+'rooms' => [
             [
             "id" => 1,
             "title" => 'Deluxe Room',
@@ -71,15 +52,13 @@ class HomeController extends Controller
             "max_booking_length" => 7,
             "image" => asset('images/rooms/room3.jpg')
             ]
-        ];
-        return view('rooms.rooms', ['room_array' => $rooms_array]);
-    }
-    
-
-    public function Calc($number1,$number2){
-        return $number1 + $number2;
-    }
-
-
-}
-
+        ],
+    'fa_icons' => [
+        'guests' => '<i class="fa-solid amenities fa-user-group me-2"></i>',
+        'bed' =>'<i class="fa-solid amenities fa-bed me-2"></i>',
+        'view' => '<i class="fa-solid amenities fa-mountain-sun me-2"></i>',
+        'wifi' => '<i class="fa-solid amenities fa-wifi me-2"></i>',
+        'bathroom' => '<i class="fa-solid amenities fa-shower me-2"></i>',
+        'kitchenette' => '<i class="fa-solid amenities fa-kitchen-set me-2"></i>'
+    ]
+];

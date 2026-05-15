@@ -3,16 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class BookingController extends Controller {
-    public function load_book(){
-        $room_1_array = [
-            "name" => 'Deluxe Room',
-            "available_from" => '2026-07-01',
-            "bookings" => [1 => ["start" => '2026-07-05', "end" => '2026-07-09'],
-                          2 => ["start" => '2026-07-16', "end" => '2026-07-21']],
-            "max_booking_length" => 7
+    public function load_book(Request $request){
+        $id = $request->query('room_id');
+        // dd($id);
+        $rooms = config("hotel.rooms");
+        // dd($rooms);
+        $fa_icons = config("hotel.fa_icons");
+        $room = collect($rooms)->firstWhere('id', $id);
+        $date = Carbon::create(2026, 5, 1);
+        $daysInMonth = $date->daysInMonth;
+
+        $existing_bookings = [
+            ["room_id" => 1,
+            "booking_start" => '2026-05-20',
+            "booking_end" => '2026-05-25'],
+            ["room_id" => 2,
+            "booking_start" => '2026-05-15',
+            "booking_end" => '2026-05-17'],
+            ["room_id" => 1,
+            "booking_start" => '2026-06-01',
+            "booking_end" => '2026-06-08'],
+            ["room_id" => 3,
+            "booking_start" => '2026-06-03',
+            "booking_end" => '2026-06-04'],
         ];
-        return view('rooms.book',["room_array" => $room_1_array]);
+        $filter_bookings = array_filter($existing_bookings, function($booking) use ($id){
+            return $booking['room_id'] == $id;
+        });
+        // dd($room);
+        return view('rooms.book', [
+            "daysInMonth" => $daysInMonth,
+            "monthName" => $date->format('F'),
+            "year" => $date->year,
+            "monthNum" => $date->month,
+            "room_id" => $id,
+            "bookings" => array_values($filter_bookings)
+        ], ['room' => $room]);
     }
 }

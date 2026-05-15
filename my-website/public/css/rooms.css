@@ -1,9 +1,9 @@
 body {
     background-image: url('/images/rooms/roomsbg.jpg');
-    background-size: cover;        /* makes it fill the screen */
-    background-position: center;   /* centers the image */
-    background-repeat: no-repeat;  /* prevents tiling */
-    background-attachment: fixed;  /* optional: parallax effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -14,12 +14,18 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   color: white;
+  /* --------------- */
+  max-width: 1200px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 2rem;
+  min-height:500px;
 }
 .room-info {
   display: flex;
   flex-direction: column;
-  /* remove justify-content: space-between */
-  height: auto;       /* let the content determine height */
+  height: auto;       
   max-width: 410px;
 }
 
@@ -34,7 +40,17 @@ body {
 .room-text {
   display: flex;
   flex-direction: column;
-  gap: 1rem;  /* evenly spaces title, description, price */
+  gap: 1rem;  
+}
+#roomDescription {
+  anchor-name: --textAnchor;
+  min-height:50px;
+}
+.room-amenities {
+  position:fixed;
+  position-anchor: --textAnchor;
+  top: anchor(bottom);
+  left: anchor(left);
 }
 .room-amenities li {
   display: flex;
@@ -63,9 +79,9 @@ body {
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
+  anchor-name: --bookingAnchor;
 }
 
-/* Hover effect */
 .glass-btn:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.6);
@@ -74,7 +90,6 @@ body {
   color: white;
 }
 
-/* Active press effect */
 .glass-btn:active {
   transform: translateY(0);
   box-shadow: none;
@@ -102,7 +117,6 @@ body {
 }
 
 
-/* Make carousel images fit nicely */
 .room-carousel-panel .carousel-inner img {
   object-fit: cover;
   width: 100%;
@@ -110,8 +124,27 @@ body {
   border-radius: 12px;
 }
 
-/* Carousel controls: subtle frosty shadow */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: drop-shadow(0 0 2px rgba(255,255,255,0.7));
+}
+
+
+#roomCarousel {
+  flex: 1 1 400px; 
+  max-width: 700px;
+}
+#nav-line {
+  width: 220px;
+  margin-left: -15px;
+  margin-top: -12px;
+}
+#roomTitle {
+  margin-top:5px;
+}
+#roomPrice {
+  position: absolute;
+  position-anchor: --bookingAnchor;
+  bottom: anchor(top); 
+  left: anchor(left);
 }
