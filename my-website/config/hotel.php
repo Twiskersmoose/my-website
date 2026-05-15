@@ -4,7 +4,7 @@ return [
             [
             "id" => 1,
             "title" => 'Deluxe Room',
-            "image" => asset('images/rooms/room1.jpg'),
+            "image" => 'images/rooms/room1.jpg',
             "description" => 'Spacious room with mountain views, spa access, and a fully stocked kitchenette.',
             "long_description" => 'Indulge in alpine luxury with our Deluxe Room, a spacious sanctuary that perfectly pairs traditional Swiss elegance with modern comfort. Wake up every morning to spectacular, unobstructed mountain views framed by panoramic windows, best enjoyed with a fresh espresso on your private balcony. The room features a sleek, fully stocked kitchenette, giving you the perfect blend of independence and convenience to prepare intimate meals or light snacks at your own pace. To elevate your stay into a true wellness retreat, you will enjoy complimentary, unlimited access to our world-class resort spa, offering heated pools and soothing saunas to rejuvenate your body and soul after a day on the slopes.',
             "display_price" => '$350/night',
@@ -33,7 +33,7 @@ return [
             "bathroom" => 'En-suite bathroom',
             "kitchenette" => null,
             "max_booking_length" => 7,
-            "image" => asset('images/rooms/room2.jpg')
+            "image" => 'images/rooms/room2.jpg'
             ],
             [
             "id" => 3,
@@ -50,7 +50,7 @@ return [
             "bathroom" => 'En-suite bathroom',
             "kitchenette" => null,
             "max_booking_length" => 7,
-            "image" => asset('images/rooms/room3.jpg')
+            "image" => '/images/rooms/room3.jpg'
             ]
         ],
     'fa_icons' => [

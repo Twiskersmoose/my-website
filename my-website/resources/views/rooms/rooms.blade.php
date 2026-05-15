@@ -45,7 +45,7 @@
     <div class="room-info flex-grow-1 d-flex flex-column">
     <div class="room-text">
         <h3 id="roomTitle">Deluxe Room</h3>
-        <img src="http://127.0.0.1:8000/images/whiteline.png" alt="divider" id="nav-line" class="navbar-divider">
+        <img src="/images/whiteline.png" alt="divider" id="nav-line" class="navbar-divider">
         <p id="roomDescription">Spacious room with mountain views.</p>
         <ul class="room-amenities list-unstyled mt-3" id="roomAmenities">
         
