@@ -135,7 +135,7 @@
         const d2 = new Date(end);
         const diffInMs = Math.abs(d2 - d1);
         const diffInDays = Math.ceil(diffInMs / (1000 * 60 * 60 * 24));
-        const total = diffInDays * pricePerNight;
+        const total = (diffInDays + 1) * pricePerNight;
         nightCountDisplay.innerText = diffInDays;
         costDisplay.innerText = `$${total.toLocaleString()}`;
         document.getElementById('total_price_input').value = total;
@@ -181,7 +181,11 @@ function highlightRange() {
         }
     });
     document.getElementById('start_display').innerHTML = startDate;
-    document.getElementById('end_display').innerHTML = endDate;
+    let date_milliseconds= new Date(endDate).getTime();
+    let one_day_millisec=1000*60*60*24;
+    let checkout_date= new Date(date_milliseconds+one_day_millisec);
+    let formattedcheckout_date = checkout_date.toISOString().split('T')[0];
+    document.getElementById('end_display').innerHTML = formattedcheckout_date;
 }
 </script>
 

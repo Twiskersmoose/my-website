@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string("wifi");
             $table->string("bathroom");
             $table->string("kitchenette")->nullable();
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
@@ -36,8 +37,9 @@ return new class extends Migration
             $table->decimal("total_cost");
             $table->string("booking_code");
             $table->text("booking_notes");
-            $table->timestamps();
             $table->unique(['booking_code']);
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
         Schema::create('guests', function (Blueprint $table) {
             $table->id();
@@ -47,7 +49,8 @@ return new class extends Migration
             $table->integer("mobile");
             $table->string("email");
             $table->text("guest_notes");
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
@@ -56,7 +59,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rooms');
+        // Schema::dropIfExists('rooms');
         Schema::dropIfExists('bookings');
         Schema::dropIfExists('guests');
     }
