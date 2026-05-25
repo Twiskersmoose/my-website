@@ -39,10 +39,10 @@
         <div class="col-lg-6 mb-4">
             <div class="glass-pane p-4 rounded h-100 d-flex flex-column">
                 <h3 class="mb-2 text-white text-upgrades" style="font-size: 2rem;">Select Your Dates</h3>
-                <h5 class="mb-4 text-white text-upgrades" style="font-size: 1.5rem;">{{$monthName}} {{$year}}</h5>
+                <h5 class="mb-3 text-white text-upgrades" style="font-size: 1.5rem;">{{$monthName}} {{$year}}</h5>
                 
                 <div id="calendarContainer">
-                    <div class="calendar-grid">
+                    <div class="calendar-grid mb-2">
                         @for($i = 1; $i <= $daysInMonth; $i++)
                             @php
                                 $currentDate = sprintf('%04d-%02d-%02d', $year, $monthNum, $i);

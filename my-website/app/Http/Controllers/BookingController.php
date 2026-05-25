@@ -29,7 +29,6 @@ class BookingController extends Controller {
             "room_id" => $id,
             "token" => $token,
             "bookings" => $bookings
-            // "bookings" => array_values($filter_bookings)
         ], ['room' => $room]);
     }
 }
