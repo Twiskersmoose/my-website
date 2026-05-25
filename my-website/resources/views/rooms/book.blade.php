@@ -46,9 +46,13 @@
                         @for($i = 1; $i <= $daysInMonth; $i++)
                             @php
                                 $currentDate = sprintf('%04d-%02d-%02d', $year, $monthNum, $i);
+                                $today = Date('d');
                                 $isBooked = false;
+                                if($i < $today){
+                                    $isBooked = true;
+                                }
                                 foreach($bookings as $booking){
-                                    if($currentDate >= $booking['booking_start'] && $currentDate <= $booking['booking_end']){
+                                    if($currentDate >= $booking['start_date'] && $currentDate <= $booking['end_date']){
                                         $isBooked = true;
                                         break;
                                     }
@@ -105,6 +109,7 @@
                     <form action="{{ url('/confirm-booking') }}" method="POST">
                         @csrf
                         <input type="hidden" id="nightly_price" value="{{ $room['price_pn'] }}">
+                        <input type="hidden" id="booking_code" value="{{ $token }}">
                         <input type="hidden" name="room_id" value="{{ $room['id'] }}">
                         <input type="hidden" name="start_date" id="start_date_input">
                         <input type="hidden" name="end_date" id="end_date_input">
@@ -139,6 +144,8 @@
         nightCountDisplay.innerText = diffInDays;
         costDisplay.innerText = `$${total.toLocaleString()}`;
         document.getElementById('total_price_input').value = total;
+        document.getElementById('start_date_input').value = start;
+        document.getElementById('end_date_input').value = end;
     }
 }
 // Date Handling
