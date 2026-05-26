@@ -9,4 +9,5 @@ use Illuminate\Http\Request;
 Route::get('/',[HomeController::class, "index"])->name("home");
 Route::get('/rooms',[HomeController::class, "load_rooms"])->name("rooms");
 Route::get('/book', [BookingController::class, 'load_book'])->name('book');
+Route::get('/faqs', [HomeController::class, 'load_faqs'])->name('faqs');
 

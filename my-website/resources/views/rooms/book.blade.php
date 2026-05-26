@@ -1,4 +1,4 @@
-@extends('secondarylayout')
+@extends('/layouts/secondarylayout')
 
 @section("title", "Rooms")
 
@@ -42,6 +42,7 @@
                 <h5 class="mb-3 text-white text-upgrades" style="font-size: 1.5rem;">{{$monthName}} {{$year}}</h5>
                 
                 <div id="calendarContainer">
+                    <div class="mt-4 grid grid-cols-7 text-center text-sm text-gray-400 md:text-base"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
                     <div class="calendar-grid mb-2">
                         @for($i = 1; $i <= $daysInMonth; $i++)
                             @php

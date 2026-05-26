@@ -1,4 +1,4 @@
-@extends('secondarylayout')
+@extends('/layouts/secondarylayout')
 
 @section("title", "Template")
 
